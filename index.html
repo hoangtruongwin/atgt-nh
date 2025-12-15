@@ -1,39 +1,138 @@
-<!-- 
-🎬 Video playlist UI Design like Skillshare With Vanilla JavaScript
-👨🏻‍⚕️ By: Coding Design
-
-You can do whatever you want with the code. However if you love my content, you can subscribed my YouTube Channel
-🌎link: www.youtube.com/codingdesign
- -->
-
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
-    <title>Video Playlist UI Design Like Udemy | SkillShare</title>
-    <link rel="stylesheet" href="stylev.css" />
-  </head>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ATGT - An Toàn Giao Thông</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
 
-  <body>
-    <main class="container">
-      <section class="main-video">
-        <video
-          src="videos/manipulate text background.mp4"
-          controls
-          autoplay
-          muted
-        ></video>
-        <h3 class="title">Title of the playing Video.</h3>
-      </section>
+    <header class="top-nav">
+        <h1 class="page-title">ATGT</h1>
+        <div class="tab-container">
+            <button class="tab-btn active" onclick="openTab('video')">Video</button>
+            <button class="tab-btn" onclick="openTab('images')">Ảnh</button>
+        </div>
+    </header>
 
-      <section class="video-playlist">
-        <h3 class="title">KHỞI ĐỘNG</h3>
-        <p class="main-desc"></p>
-        <div class="videos"></div>
-      </section>
-    </main>
+    <div id="tab-video" class="tab-content active">
+        <main class="container">
+            <section class="main-video">
+                <div class="header">
+                    <h3 class="title">Title of the playing Video.</h3>
+                    <div class="menu-icon">
+                        <svg viewBox="0 0 24 24" width="30" height="30" fill="white">
+                            <path d="M3 18h18v-2H3v2zm0-5h18v-2H3v2zm0-7v2h18V6H3z"></path>
+                        </svg>
+                    </div>
+                </div>
+                <video src="videos/manipulate text background.mp4" controls autoplay muted></video>
+            </section>
+    
+            <section class="video-playlist">
+                <h3 class="title">Danh sách phát</h3>
+                <div class="videos">
+                    </div>
+            </section>
+        </main>
+    </div>
+
+    <div id="tab-images" class="tab-content">
+        
+        <section class="activity-container">
+            <div class="activity-header">
+                <h2>HOẠT ĐỘNG VẬN DỤNG</h2>
+                <p class="scenario">
+                    <strong>Tình huống: </strong>Một buổi tối, bạn A (17 tuổi) lấy xe mô tô Honda Air Balde của bố để đi dự sinh nhật bạn. Trên đường về, A chở B và C trên xe của mình, chạy với tốc độ cao, lạng lách, đánh võng trên đường. Một tổ cảnh sát giao thông đang đi tuần tra trên đường thấy vậy đã ra tín hiệu yêu cầu bạn A dừng xe để kiểm tra, nhưng A đã cho xe tăng tốc độ để chạy trốn. Hãy nêu các lỗi vi phạm quy tắc an toàn giao thông của bạn A, B, C.
+                    <br><em>(Bài làm của các nhóm về cách xử lý tình huống)</em>
+                </p>
+            </div>
+    
+            <div class="card-grid">
+                <div class="card">
+                    <div class="card-user">
+                        <div class="avatar">1</div>
+                        <div class="info"><strong>Nhóm I</strong><span>Vận dụng</span></div>
+                    </div>
+                    <img src="images/mr1.jpg" alt="Vận dụng 1">
+                </div>
+                <div class="card">
+                    <div class="card-user">
+                        <div class="avatar">2</div>
+                        <div class="info"><strong>Nhóm II</strong><span>Vận dụng</span></div>
+                    </div>
+                    <img src="images/mr2.jpg" alt="Vận dụng 2">
+                </div>
+                <div class="card">
+                    <div class="card-user">
+                        <div class="avatar">3</div>
+                        <div class="info"><strong>Nhóm III</strong><span>Vận dụng</span></div>
+                    </div>
+                    <img src="images/mr3.jpg" alt="Vận dụng 3">
+                </div>
+                <div class="card">
+                    <div class="card-user">
+                        <div class="avatar">4</div>
+                        <div class="info"><strong>Nhóm IV</strong><span>Vận dụng</span></div>
+                    </div>
+                    <img src="images/mr4.jpg" alt="Vận dụng 4">
+                </div>
+            </div>
+        </section>
+
+        <hr style="border: 0; border-top: 1px solid #333; margin: 2rem auto; max-width: 1600px;">
+
+        <section class="activity-container">
+            <div class="activity-header" style="border-left-color: #3ea6ff;">
+                <h2>HOẠT ĐỘNG MỞ RỘNG</h2>
+<p class="scenario">
+                <strong>Tình huống:</strong> Sáng nay, Tuấn (lớp 11A5) ngủ dậy muộn, gần đến giờ đi học. 
+                Tuấn đã mượn xe Vision của mẹ đi học. Tuấn đi rất nhanh, không đội mũ bảo hiểm, 
+                gần đến cổng trường, sợ nhà trường phát hiện, Tuấn đã gửi xe ở người dân ở cổng trường, kịp giờ học.
+                <br><br>
+                <em>Qua tình huống trên, em có nhận xét gì về việc chấp hành luật giao thông của Tuấn? Nếu em là Tuấn, em sẽ xử lý như nào?</em>
+            </p>
+            </div>
+    
+            <div class="card-grid">
+                <div class="card">
+                    <div class="card-user">
+                        <div class="avatar" style="background: #3ea6ff;">A</div>
+                        <div class="info"><strong>Nhóm I</strong><span>Mở rộng</span></div>
+                    </div>
+                    <img src="images/vd1.jpg" alt="Mở rộng A">
+                </div>
+                <div class="card">
+                    <div class="card-user">
+                        <div class="avatar" style="background: #3ea6ff;">B</div>
+                        <div class="info"><strong>Nhóm II</strong><span>Mở rộng</span></div>
+                    </div>
+                    <img src="images/vd2.jpg" alt="Mở rộng B">
+                </div>
+                <div class="card">
+                    <div class="card-user">
+                        <div class="avatar" style="background: #3ea6ff;">C</div>
+                        <div class="info"><strong>Nhóm III</strong><span>Mở rộng</span></div>
+                    </div>
+                    <img src="images/vd3.jpg" alt="Mở rộng C">
+                </div>
+                <div class="card">
+                    <div class="card-user">
+                        <div class="avatar" style="background: #3ea6ff;">D</div>
+                        <div class="info"><strong>Nhóm IV</strong><span>Mở rộng</span></div>
+                    </div>
+                    <img src="images/vd4.jpg" alt="Mở rộng D">
+                </div>
+            </div>
+        </section>
+    </div>
+
+    <div id="lightbox" class="lightbox">
+        <span class="close-btn">&times;</span>
+        <img class="lightbox-content" id="lightbox-img">
+    </div>
+
     <script src="script.js"></script>
-  </body>
+</body>
 </html>
